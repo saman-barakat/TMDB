@@ -1,0 +1,17 @@
+:root {
+  --tmdb-dark-blue: #032541;
+  --tmdb-light-blue: #01b4e4;
+}
+
+.app-header {
+  background-color: var(--tmdb-dark-blue);
+}
+
+.app-header .nav-link.active {
+  color: var(--tmdb-light-blue);
+}
+
+.app-footer {
+  background-color: var(--tmdb-dark-blue);
+  color: #fff;
+}
