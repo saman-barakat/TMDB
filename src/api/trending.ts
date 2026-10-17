@@ -1,11 +1,11 @@
 import { apiClient } from "@/api/client";
-import type { Movie, PaginatedResponse, TimeWindow } from "@/types/tmdb";
+import type { PaginatedResponse, TimeWindow, TrendingItem } from "@/types/tmdb";
 
-export const getTrendingMovies = async (
-  timeWindow: TimeWindow = "week",
-): Promise<PaginatedResponse<Movie>> => {
-  const { data } = await apiClient.get<PaginatedResponse<Movie>>(
-    `/trending/movie/${timeWindow}`,
+export const getTrending = async (
+  timeWindow: TimeWindow = "day",
+): Promise<PaginatedResponse<TrendingItem>> => {
+  const { data } = await apiClient.get<PaginatedResponse<TrendingItem>>(
+    `/trending/all/${timeWindow}`,
   );
   return data;
 };

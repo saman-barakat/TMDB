@@ -36,3 +36,7 @@ export interface TvShow {
 }
 
 export type TimeWindow = "day" | "week";
+export type TrendingItem =
+  | (Movie & { media_type: "movie" })
+  | (TvShow & { media_type: "tv" })
+  | { id: number; media_type: "person" };
