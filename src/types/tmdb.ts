@@ -40,3 +40,12 @@ export type TrendingItem =
   | (Movie & { media_type: "movie" })
   | (TvShow & { media_type: "tv" })
   | { id: number; media_type: "person" };
+
+export interface Genre {
+  id: number;
+  name: string;
+}
+
+export interface GenreListResponse {
+  genres: Genre[];
+}

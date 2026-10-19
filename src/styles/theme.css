@@ -221,3 +221,34 @@
   color: #6c757d;
   font-size: 0.9rem;
 }
+
+/* Poster grid */
+.media-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 2rem 1rem;
+}
+
+.media-grid .media-card {
+  width: auto;
+}
+
+/* Genre chips */
+.chip {
+  padding: 0.2rem 0.75rem;
+  border: 1px solid #ced4da;
+  border-radius: 999px;
+  background: #fff;
+  color: #212529;
+  font-size: 0.875rem;
+}
+
+.chip:hover {
+  border-color: var(--tmdb-light-blue);
+}
+
+.chip.is-active {
+  background: var(--tmdb-light-blue);
+  border-color: var(--tmdb-light-blue);
+  color: #fff;
+}
